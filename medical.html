@@ -6,13 +6,12 @@
    <meta name="viewport" content="width=device-width,  initial-scale= 1.0">
    <title>medical</title>
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.3/swiper-bundle.min.css" />
 
-   <!-- map library css  -->
    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
    <link rel="stylesheet" href="medical.css">
    
   
@@ -22,92 +21,79 @@
 
 <body>
 
-    <div class="banner">
-
-      <header>
-
-         <div id="menu-bar" class="fas fa-bars"></div>
-
-         <a href="#" class="logo"><span></span>Medical</a>
-         <nav class="navbar">
-            <a href="#"> الرئيسية</a>
-            <a href="#"> من نحن </a>
-            <a href="#">الخدمات</a>
-            <a href="#">الاطباء</a>
-            <a href="#"> اتصل بنا</a>
-         </nav>
-
-         <div class="icons">
-            <i class="fas fa-user" id="login-btn"></i>
-            <a href="#"><i class="fas fa-user-plus" id="register-btn"></i></a> 
-
-         </div>
-
-         <form action="" class="search-bar-container">
-            <input type="search" id="search-bar" placeholder="search here...">
-            <label for="search-bar" class="fas fa-search"></label>
-         </form>
-        
-      </header>
-
-      <div class="login-form-container">
-          
-         <i class="fas fa-times" id="form-close"></i>
-
-         <form action="">
-            <h3>login</h3>
-            <input type="email" class="box" placeholder="enter your email">
-            <input type="password" class="box" placeholder="enter your password">
-            <input type="submit" value="login now" class="btn">
-            <input type="checkbox" id="remember">
-            <label for="remember">remember me</label>
-            <p>forget password? <a href="#">click here</a></p>
-            <p>don't have an account? <a href="#"> register now</a></p>
-         </form>
-
-      </div>
-      
-      <!-------------------------------------home section--------------------->
-      <section class="home" id="home">
-
-        <div class="content">
-
-           <h3>أفضل علاج ورعاية لحياة صحية جيدة</h3>
-           <p>نحن هنا لمساعدتك والاطمئنان علي صحتك</p>
-           <a href="#" class="btn">اتصل بنا الآن</a>
-        </div>
-
-      </section>
+ 
+<!-- Top Header -->
+<div class="top-header">
+    <div class="contact-info">
+        <span>
+            <i class="fas fa-phone"></i> 
+            <a href="tel:+123456789" style="color: white; text-decoration: none;">+123 456 789</a>
+        </span>
+        <span>
+            <i class="fas fa-envelope"></i> 
+            <a href="mailto:info@medical.com" style="color: white; text-decoration: none;">info@medical.com</a>
+        </span>
     </div>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</div>
 
-    <!------------------------------------help you----------------------->
-    <!--<div >
-      <h2 class="hsec">كيف نستطيع مساعدتك؟</h2>
-      <p class="textsec">نحن هنا في خدمتك نوفر لك رعاية طبية شاملة </p>
-   </div>
-      <section class="sec">
-         
-        <div class="container">
-            
-            <div class="right-section">
-                <div class="card" data-aos="fade-up">
-                    <img src="img/burger3.png" alt="Icon 1">
-                    <h3>خدمات طبية فائقة</h3>
-                    <p>نحن نساعدك في العثور على طبيبك المناسب لحالتك</p>
-                </div>
-                <div class="card" data-aos="fade-up">
-                    <img src="img/delivery-man.png" alt="Icon 2">
-                    <h3>خدمات طبية فائقة</h3>
-                    <p>نحن نساعدك في العثور على طبيبك المناسب لحالتك</p>
-                </div>
-                <div class="card" data-aos="fade-up">
-                    <img src="img/grocery2.png" alt="Icon 3">
-                    <h3>خدمات طبية فائقة</h3>
-                    <p>نحن نساعدك في العثور على طبيبك المناسب لحالتك</p>
-                </div>
-            </div>
-        </div>
-    </section>  -->
+<header>
+    <div id="menu-bar" class="fas fa-bars"></div> 
+    <a href="#" class="logo">Medical</a>
+    <nav class="navbar">
+
+        <a href="#">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="services.html">الخدمات</a>
+        <a href="doctors.html">الأطباء</a>
+        <a href="contact.html">اتصل بنا</a>
+    </nav>
+    <div class="icons">
+        <i class="fas fa-user" id="login-btn" title="تسجيل الدخول"></i>
+        <i class="fas fa-user-plus" id="register-btn" title="إنشاء حساب"></i>
+    </div>
+</header>
+
+<!-- login -->
+<div class="login-form-container">
+    <i class="fas fa-times" id="form-close"></i>
+   
+    <form action="">
+        <h3>تسجيل الدخول</h3>
+        <input type="email" class="box" placeholder="ادخل البريد الالكتروني">
+        <input type="password" class="box" placeholder="ادخل كلمة المرور">
+        <input type="submit" value="تسجيل الدخول" class="btnlogin">
+        <input type="checkbox" id="remember">
+        <label for="remember">ذكرني</label>
+        <p>هل نسيت كلمة المرور؟ <a href="#">اضغط هنا</a></p>
+        <p>هل لا تمتلك حساب؟ <a href="#"> سجل الآن</a></p>
+     </form>
+
+</div>
+
+<!--------------------------------------------------------- home section -->
+<section class="home">
+    <div class="home-content">
+        <h3>أفضل علاج ورعاية لحياة صحية جيدة</h3>
+        <p>نحن هنا لمساعدتك والاطمئنان على صحتك</p>
+        <a href="#" class="btnhome">احجز الآن</a>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
 
     <!-----------------------------------------------about------------------>
       <div class="container">
@@ -137,50 +123,117 @@
         </div>
     </div>
 
-    <!----------------------------------------------------services------------------>
-   <section class="features-section">
-    <div class="features-box">
+<!---------------------------------------services--------------------->
 
-       <div class="services">
-          <h2 class="servicesh2"> خدماتنا</h2>
-          <p class="servicesp">نوفر لكم جميع الخدمات الطبية </p>
-          <i class="fa-solid fa-heart-pulse"></i>
-       </div>
+<div class="services-section">
+    <h2 class="services-title">كيف يمكننا مساعدتك؟</h2>
+    <p class="services-subtitle">نقدم لك أفضل الخدمات الطبية لضمان راحتك وصحتك على مدار الساعة</p>
 
-        <div class="features-container">
-          
-            <div class="feature-card" data-aos="fade-up">
-                <i class="fa-solid fa-plus-minus"></i>
-                <h4>فحص كامل وشامل جميع الوظائف</h4>
-                <p>فحص كامل لجميع وظائف الجسم كاملة </p>
+    <div class="services-container">
+        <div class="service-card">
+            <h3>رعاية خاصة</h3>
+            <p>يمكنك الوصول إلى فريق الاطباء لدينا للعثور على المتخصص المناسب لك </p>
+            <div class="service-icon">
+                <img src="img/icon2.png" alt="Special Care">
             </div>
-            <div class="feature-card" data-aos="fade-up">
-                <i class="fa-solid fa-plus-minus"></i>
-                <h4>فحص لوظائف القلب والعناية به</h4>
-                <p>فحص وظايف القلب والعناية بالقلب جيداً </p>
+        </div>
+        <div class="service-card">
+            <h3>استشارة</h3>
+            <p>يمكنك الوصول إلى فريق الاطباء لدينا للعثور على المتخصص المناسب لك </p>
+            <div class="service-icon">
+                <img src="img/icon1.png" alt="Consultant">
             </div>
-            <div class="feature-card" data-aos="fade-up">
-                <i class="fa-solid fa-plus-minus"></i>
-                <h4>فحص السكر والعناية به</h4>
-                <p>فحص نسبة السكر والعناية جيداً بمرضي السكر </p>
+        </div>
+        <div class="service-card">
+            <h3>كشف</h3>
+            <p>يمكنك الوصول إلى فريق الاطباء لدينا للعثور على المتخصص المناسب لك </p>
+            <div class="service-icon">
+                <img src="img/icon3.png" alt="Treatment">
             </div>
-            <div class="feature-card" data-aos="fade-up">
-                <i class="fa-solid fa-plus-minus"></i>
-             <h4>فحص السكر والعناية به</h4>
-             <p>فحص نسبة السكر والعناية جيداً بمرضي السكر </p>
-            </div>
-
         </div>
     </div>
-</section> 
+</div>
 
 
 
 
 
-      <script src="medical.js"></script>
-      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+
+
+
+<div class="custom-swiper-section">
+    <h2 class="swiper-title">خدماتنا الطبية المتخصصة</h2>
+    <p class="swiper-subtitle">نقدم لك أفضل الخدمات الطبية على يد نخبة من الأطباء المتخصصين في مختلف المجالات لضمان راحتك</p>
+
+    <div class="custom-swiper swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="custom-card">
+                    <img src="img/about1.jpg" alt="Orthopedic">
+                    <div class="icon"><i class="fas fa-hand-holding-medical"></i></div>
+                    <h3>العظام</h3>
+                    <p>نمتلك أفضل الاطباء للكشف علي العظام كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
+                    <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="custom-card">
+                    <img src="img/about2.jpg" alt="Hematology">
+                    <div class="icon"><i class="fas fa-vial"></i></div>
+                    <h3>أمراض الدم </h3>
+                    <p>نمتلك أفضل الاطباء للكشف علي أمراض الدم كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
+                    <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="custom-card">
+                    <img src="img/about3.jpg" alt="Dermatology">
+                    <div class="icon"><i class="fas fa-user-md"></i></div>
+                    <h3>الأمراض الجلدية </h3>
+                    <p>نمتلك أفضل الاطباء للكشف علي الامراض الجلدية كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
+                    <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="custom-card">
+                    <img src="img/about4.jpg" alt="Cardiology">
+                    <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>أمراض القلب</h3>
+                    <p>نمتلك أفضل الاطباء للكشف علي أمراض القلب وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
+                    <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <script src="medical.js"></script>
+   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.3/swiper-bundle.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
  </body>
  </html>     
