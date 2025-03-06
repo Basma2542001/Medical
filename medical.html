@@ -10,8 +10,7 @@
    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
    <link rel="stylesheet" href="medical.css">
    
   
@@ -20,6 +19,13 @@
 </head>
 
 <body>
+
+ 
+ <!-- صورة التحميل-->
+ <!--<div class="loading-screen">
+    <img src="img/preloading.gif" alt="جارِ التحميل...">
+    <p>تحميل...</p>
+</div>-->
 
  
 <!-- Top Header -->
@@ -155,65 +161,102 @@
 </div>
 
 
+<!------------------------------------------slider services------------------>
+<div class="slider-header">
+    <h2>خدماتنا الطبية المتخصصة</h2>
+    <p>نقدم لك أفضل الخدمات الطبية على يد نخبة من الأطباء المتخصصين في مختلف المجالات لضمان راحتك</p>
+    <div class="icon"><i class="fa-solid fa-user-doctor"></i></div>
 
-
-
-
-
-
-
-
-<div class="custom-swiper-section">
-    <h2 class="swiper-title">خدماتنا الطبية المتخصصة</h2>
-    <p class="swiper-subtitle">نقدم لك أفضل الخدمات الطبية على يد نخبة من الأطباء المتخصصين في مختلف المجالات لضمان راحتك</p>
-
-    <div class="custom-swiper swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="custom-card">
-                    <img src="img/about1.jpg" alt="Orthopedic">
-                    <div class="icon"><i class="fas fa-hand-holding-medical"></i></div>
-                    <h3>العظام</h3>
-                    <p>نمتلك أفضل الاطباء للكشف علي العظام كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
-                    <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="custom-card">
-                    <img src="img/about2.jpg" alt="Hematology">
-                    <div class="icon"><i class="fas fa-vial"></i></div>
-                    <h3>أمراض الدم </h3>
-                    <p>نمتلك أفضل الاطباء للكشف علي أمراض الدم كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
-                    <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="custom-card">
-                    <img src="img/about3.jpg" alt="Dermatology">
-                    <div class="icon"><i class="fas fa-user-md"></i></div>
-                    <h3>الأمراض الجلدية </h3>
-                    <p>نمتلك أفضل الاطباء للكشف علي الامراض الجلدية كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
-                    <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="custom-card">
-                    <img src="img/about4.jpg" alt="Cardiology">
-                    <div class="icon"><i class="fas fa-heartbeat"></i></div>
-                    <h3>أمراض القلب</h3>
-                    <p>نمتلك أفضل الاطباء للكشف علي أمراض القلب وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
-                    <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
 
 
+  <div class="swiper-container">
+        
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="img/about1.jpg" alt="عنوان 1">
+                <div class="icon"><i class="fas fa-hand-holding-medical"></i></div>
+
+                <h3>العظام</h3>
+                <p>نمتلك أفضل الاطباء للكشف علي العظام كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
+                <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
+
+            </div>
+            <div class="swiper-slide">
+                <img src="img/about2.jpg" alt="عنوان 2">
+                <div class="icon"><i class="fas fa-vial"></i></div>
+
+                <h3>امراض الدم</h3>
+                <p>نمتلك أفضل الاطباء للكشف علي أمراض الدم كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
+                <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
+
+            </div>
+            <div class="swiper-slide">
+                <img src="img/about3.jpg" alt="عنوان 3">
+                <div class="icon"><i class="fas fa-user-md"></i></div>
+
+
+                <h3>الامراض الجلدية</h3>
+                <p>نمتلك أفضل الاطباء للكشف علي الامراض الجلدية كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
+                <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
+
+            </div>
+            <div class="swiper-slide">
+                <img src="img/about4.jpg" alt="عنوان 4">
+                <div class="icon"><i class="fas fa-heartbeat"></i></div>
+
+                <h3>امراض القلب</h3>
+                <p>نمتلك أفضل الاطباء للكشف علي أمراض القلب وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
+                <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
+
+            </div>
+            <div class="swiper-slide">
+                <img src="img/about1.jpg" alt="عنوان 5">
+                <div class="icon"><i class="fas fa-user-md"></i></div>
+
+                <h3>الامراض الجلدية</h3>
+                <p>نمتلك أفضل الاطباء للكشف علي الامراض الجلدية كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
+                <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
+
+            </div>
+            <div class="swiper-slide">
+                <img src="img/about2.jpg" alt="عنوان 6">
+                <div class="icon"><i class="fas fa-vial"></i></div>
+
+                <h3>امراض الدم</h3>
+                <p>نمتلك أفضل الاطباء للكشف علي أمراض الدم كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
+                <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
+
+            </div>
+            <div class="swiper-slide">
+                <img src="img/about3.jpg" alt="عنوان 7">
+                <div class="icon"><i class="fas fa-heartbeat"></i></div>
+
+                <h3>امراض القلب</h3>
+                <p>نمتلك أفضل الاطباء للكشف علي أمراض القلب وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
+                <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
+
+            </div>
+        </div>
+    </div>
+   
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            speed: 800,
+            slidesPerGroup: 1,
+            centeredSlides: false,
+        });
+    </script>
 
 
 
@@ -223,16 +266,150 @@
 
 
 
+<section class="doctor">
+    
+   <div class="title">فريق متخصص من الأطباء في مختلف التخصصات الطبية</div>
+   <div class="icon"><i class="fa-solid fa-star-of-life"></i></div>
+
+    <div class="container">
+        
+        <div class="card">
+            <div class="info">
+                <h3>د/ محمد احمد</h3>
+                <p>طبيب القلب</p>
+            </div>
+            <div class="image-container">
+                <div class="border-shape"></div>
+                <div class="inner-shape">
+                    <img src="img/about1.jpg" alt="Doctor">
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <div class="image-container">
+                <div class="border-shape"></div>
+                <div class="inner-shape">
+                    <img src="img/about2.jpg" alt="Doctor">
+                </div>
+            </div>
+            <div class="info">
+                <h3>د/ عمر ناصر</h3>
+                <p>أخصائي السمع</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="info">
+                <h3>د/ اية فتحي</h3>
+                <p>طبيب الأسنان</p>
+            </div>
+            <div class="image-container">
+                <div class="border-shape"></div>
+                <div class="inner-shape">
+                    <img src="img/about3.jpg" alt="Doctor">
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <div class="image-container">
+                <div class="border-shape"></div>
+                <div class="inner-shape">
+                    <img src="img/about4.jpg" alt="Doctor">
+                </div>
+            </div>
+            <div class="info">
+                <h3>د/ مريم حسن</h3>
+                <p>طبيب الأعصاب</p>
+            </div>
+        </div>
+
+        
+        
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="info">
+                <h3>د/ محمد احمد</h3>
+                <p>طبيب القلب</p>
+            </div>
+            <div class="image-container">
+                <div class="border-shape"></div>
+                <div class="inner-shape">
+                    <img src="img/about1.jpg" alt="Doctor">
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <div class="image-container">
+                <div class="border-shape"></div>
+                <div class="inner-shape">
+                    <img src="img/about2.jpg" alt="Doctor">
+                </div>
+            </div>
+            <div class="info">
+                <h3>د/ عمر ناصر</h3>
+                <p>أخصائي السمع</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="info">
+                <h3>د/ اية فتحي</h3>
+                <p>طبيب الأسنان</p>
+            </div>
+            <div class="image-container">
+                <div class="border-shape"></div>
+                <div class="inner-shape">
+                    <img src="img/about3.jpg" alt="Doctor">
+                </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <div class="image-container">
+                <div class="border-shape"></div>
+                <div class="inner-shape">
+                    <img src="img/about4.jpg" alt="Doctor">
+                </div>
+            </div>
+            <div class="info">
+                <h3>د/ مريم حسن</h3>
+                <p>طبيب الأعصاب</p>
+            </div>
+        </div>
+
+        
+        
+    </div>
+
+</section>
 
 
 
 
 
-   <script src="medical.js"></script>
-   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.3/swiper-bundle.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+
+<script>
+    // تأخير تحميل الصور  بعد تحميل الصفحة
+    window.onload = function() {
+        setTimeout(function() {
+            document.querySelector(".loading-screen").style.display = "none"; // 
+            let gallery = document.querySelector(".loadimage");
+            gallery.style.opacity = "1"; 
+        }, 2000); 
+    };
+</script>
+
+
+<script src="medical.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.3/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 
  </body>

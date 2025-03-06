@@ -42,24 +42,15 @@ menuBtn.onclick = () => {
 
 
 
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    var swiper = new Swiper(".custom-swiper", {
-        slidesPerView: 3,  
-        spaceBetween: 30,  
-        loop: true,   // يجعل السلايدر بلا نهاية
-        loopAdditionalSlides: 3,  // يضمن إعادة التكرار بسلاسة
-        autoplay: {
-            delay: 2000,  // تقليل التأخير لجعل الحركة سلسة
-            disableOnInteraction: false,  
-        },
-        speed: 800, // يجعل الحركة أسرع وأنعم
-        breakpoints: {
-            1024: { slidesPerView: 3 },
-            768: { slidesPerView: 2 },
-            480: { slidesPerView: 1 }
-        }
-    });
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    speed: 800,
+    slidesPerGroup: 1,
+    centeredSlides: false,
 });
