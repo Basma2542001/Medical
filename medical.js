@@ -54,3 +54,18 @@ var swiper = new Swiper('.swiper-container', {
     slidesPerGroup: 1,
     centeredSlides: false,
 });
+
+
+
+
+window.addEventListener("scroll", function () { 
+    if (window.scrollY >= 200) {   
+        goToBtn.classList.add("active");
+    } else { 
+        goToBtn.classList.remove("active");
+    }
+} );
+
+
+
+
