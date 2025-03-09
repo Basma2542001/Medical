@@ -16,7 +16,253 @@
    <link rel="stylesheet" href="medical.css">
    
 
-   
+   <style>
+    .homeabout {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), 
+                url('img/background.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            flex-direction: column;
+    }
+
+    .homeabout-content h3 {
+            font-size: 35px;
+            text-transform: uppercase;
+            text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+     
+    .homeabout-content a{
+        color: #fff;
+    }
+    .homeabout-content a:hover{
+        color: #007bff;
+    }
+    /*---------------------------- why we ------------*/
+    .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .text-section {
+            width: 55%;
+        }
+        .text-section h2 {
+            color: #111;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .text-section p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .list-section {
+            width: 40%;
+        }
+        .list-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .list-section li {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        .list-section li::before {
+            content: "✔";
+            color:#007bff;
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 10px;
+            margin-right: 0;
+            
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .section-title img {
+            width: 20px;
+            margin-left: 8px;
+            margin-right: 0;
+        }
+        
+
+        /*------------------------------  banner  -------------------*/
+        .banner {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 20px;
+            color: white;
+            text-align: right;
+            overflow: hidden;
+        }
+        .banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('img/banner.jpg') no-repeat center center/cover;
+            transform: scaleX(-1); 
+            z-index: -1;
+            filter: brightness(0.5); /* تغميق الخلفية */
+        }
+        .banner-content {
+            max-width: 550px;
+            padding: 20px;
+            border-radius: 5px;
+            position: relative;
+            z-index: 1;
+        }
+        .banner h2 {
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+        .banner p {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .banner button {
+            background: transparent; 
+            color: white; 
+            padding: 12px 20px;
+            border: 2px solid #007bff; 
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50px;
+            transition: all 0.3s ease; 
+        }
+
+        .banner button:hover {
+            background: #007bff;
+            color: white; 
+        }
+
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse; 
+            gap: 15px; 
+            margin-top: 20px;
+        }
+
+        .contact-info i {
+            font-size: 30px; 
+            color: #fff; 
+            background: #007bff;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .contact-text {
+            text-align: right; 
+            border-right: 2px solid #fff;
+            padding-right: 20px;
+        }
+
+        .contact-text h3 {
+            font-size: 20px;
+            color: white; 
+            margin: 0;
+        }
+
+       .contact-text p {
+            font-size: 15px;
+            color: white; 
+            margin: 0;
+            direction: ltr; 
+        }
+
+        /*----------------------------- questions -----------------*/
+        .containerfaq {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            direction: rtl;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .faq-section {
+            width: 50%;
+            margin-right: 50px;
+          
+        }
+        .faq-section h2{
+            font-size: 20px;
+        }
+        .faq-item {
+            background: #007bff;
+            color: white;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            position: relative;
+        }
+        .faq-item .question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        .faq-item .question span{
+            font-size: 17px;
+        }
+        .faq-item .answer {
+            display: none;
+            background: white;
+            color: black;
+            padding: 15px;
+            border-radius: 0 0 5px 5px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #c5c4c4;
+            font-size: 14px;
+        }
+        .faq-item .arrow {
+            font-size: 20px;
+            transition: transform 0.3s;
+            color: white;
+        }
+        .faq-item.active .arrow {
+            transform: rotate(180deg);
+        }
+        .image-section {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-section img {
+            width: 74%;
+            border-radius: 10px;
+            border: 1px solid #007bff;
+            border-radius: 50%;
+        }
+
+
+       
+   </style>
 
 </head>
 
@@ -77,11 +323,9 @@
 </div>
 
 <!--------------------------------------------------------- home section -->
-<section class="home">
-    <div class="home-content">
-        <h3>أفضل علاج ورعاية لحياة صحية جيدة</h3>
-        <p>نحن هنا لمساعدتك والاطمئنان على صحتك</p>
-        <a href="#" class="btnhome">احجز الآن</a>
+<section class="homeabout">
+    <div class="homeabout-content">
+        <h3>من نحن / <a href="medical.html"> الرئيسية</a></h3>
     </div>
 </section>
 
@@ -93,175 +337,206 @@
 
 
 
+<!--------------------------------------------- why we -------------->
+<div class="container">
+    <div class="text-section">
+        <div class="section-title">
+            <img src="https://cdn-icons-png.flaticon.com/128/295/295728.png" alt="icon">
+            <span>لماذا تختارنا</span>
+        </div>
+        <h2>لماذا يثق المرضى بنا لرعايتهم</h2>
+        <p>
+            التزامنا بالتميز، والتعاطف، والعلاج المخصص أكسبنا ثقة العديد من المرضى. 
+            اكتشف ما يميز رعايتنا عن غيرها، واكتشف الفرق الذي نقدمه لك.
+        </p>
+    </div>
+    <div class="list-section">
+        <ul>
+            <li>نقدم ساعات عمل مرنة تناسب جدولك المزدحم.</li>
+            <li>فريقنا ملتزم بجعلك تشعر بالراحة.</li>
+            <li>نضمن لك رعاية سريعة وفعالة.</li>
+            <li>نساعدك على إدارة صحتك في كل مراحل الحياة.</li>
+        </ul>
+    </div>
+</div>
 
 
+<!-----------------------------   banner  --------------------->
+<section class="banner">
+    <div class="banner-content">
+        <h2>أفضل الأطباء في خدمتك</h2>
+        <p>نوفر لك فريقاً طبياً متميزاً على مدار الساعة لرعايتك الصحية</p>
+        <div class="contact-info">
+            <i class="fas fa-phone-alt"></i>
 
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <style>
-       
-        .swiper-container {
-            width: 80%;
-            margin: auto;
-            padding: 20px 0;
-            overflow: hidden;
-        }
-        .swiper-slide {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            background: #fff;
-            transition: transform 0.5s ease-in-out;
-        }
-        .swiper-slide img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-        .swiper-slide h3 {
-            margin: 10px 0 5px;
-            font-size: 20px;
-        }
-        .swiper-slide p {
-            color: #666;
-            text-align: center;
-            font-size: 14px;
-            margin: 20px auto;
-        }
-        .swiper-slide .icon {
-    width: 60px;
-    height: 60px;
-    background: #007bff;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin: -25px auto 10px;
-    font-size: 20px;
-    text-align: center;
-    border: 2px solid #fff;
-}
-    </style>
-</head>
-<body>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="img/about1.jpg" alt="عنوان 1">
-                <div class="icon"><i class="fas fa-hand-holding-medical"></i></div>
-
-                <h3>العظام</h3>
-                <p>نمتلك أفضل الاطباء للكشف علي العظام كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
-                <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
-
-            </div>
-            <div class="swiper-slide">
-                <img src="img/about2.jpg" alt="عنوان 2">
-                <div class="icon"><i class="fas fa-vial"></i></div>
-
-                <h3>امراض الدم</h3>
-                <p>نمتلك أفضل الاطباء للكشف علي أمراض الدم كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
-                <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
-
-            </div>
-            <div class="swiper-slide">
-                <img src="img/about3.jpg" alt="عنوان 3">
-                <div class="icon"><i class="fas fa-user-md"></i></div>
-
-
-                <h3>الامراض الجلدية</h3>
-                <p>نمتلك أفضل الاطباء للكشف علي الامراض الجلدية كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
-                <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
-
-            </div>
-            <div class="swiper-slide">
-                <img src="img/about4.jpg" alt="عنوان 4">
-                <div class="icon"><i class="fas fa-heartbeat"></i></div>
-
-                <h3>امراض القلب</h3>
-                <p>نمتلك أفضل الاطباء للكشف علي أمراض القلب وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
-                <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
-
-            </div>
-            <div class="swiper-slide">
-                <img src="img/about1.jpg" alt="عنوان 5">
-                <div class="icon"><i class="fas fa-user-md"></i></div>
-
-                <h3>الامراض الجلدية</h3>
-                <p>نمتلك أفضل الاطباء للكشف علي الامراض الجلدية كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
-                <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
-
-            </div>
-            <div class="swiper-slide">
-                <img src="img/about2.jpg" alt="عنوان 6">
-                <div class="icon"><i class="fas fa-vial"></i></div>
-
-                <h3>امراض الدم</h3>
-                <p>نمتلك أفضل الاطباء للكشف علي أمراض الدم كاملة وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
-                <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
-
-            </div>
-            <div class="swiper-slide">
-                <img src="img/about3.jpg" alt="عنوان 7">
-                <div class="icon"><i class="fas fa-heartbeat"></i></div>
-
-                <h3>امراض القلب</h3>
-                <p>نمتلك أفضل الاطباء للكشف علي أمراض القلب وعمل الفحوصات اللازمة للاطمئنان علي صحتك</p>
-                <a href="#" class="custom-read-more"><i class="fas fa-phone"></i>احجز الآن</a>
-
+            <div class="contact-text">
+                <h3>احجز موعدك الآن</h3>
+                <p>+20 123 456 7890</p>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,
-            spaceBetween: 10,
-            loop: true,
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
-            },
-            speed: 800,
-            slidesPerGroup: 1,
-            centeredSlides: false,
+</section>
+
+
+
+
+<!------------------------------------------------- questions ------------->
+<div class="containerfaq">
+    <div class="faq-section">
+        <h2>الأسئلة الشائعة</h2>
+        <div class="faq-item active" onclick="toggleAnswer(this)">
+            <div class="question">
+                <span>هل شرب الماء بكثرة مفيد؟</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="answer" style="display: block;">نعم، يساعد في ترطيب الجسم، تحسين الهضم، تخليص الجسم من السموم، وتحسين صحة الجلد، لكن الإفراط الشديد قد يسبب مشاكل مثل انخفاض الصوديوم في الدم</div>
+        </div>
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+                <span>كيف يمكن تقوية جهاز المناعة؟</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="answer">يمكن تقوية المناعة عن طريق:
+
+                تناول أطعمة غنية بالفيتامينات مثل الفواكه والخضروات
+                ممارسة الرياضة بانتظام -
+                النوم الجيد (7-9 ساعات يوميًا) -
+                 شرب الماء بكثرة -
+                تقليل التوتر والابتعاد عن التدخين</div>
+        </div>
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+                <span>ما هي أعراض نقص فيتامين د؟</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="answer">فيتامين د هو مهم جدًا لصحة العظام، والأسنان، والجهاز المناعي. يعرف أيضًا باسم "فيتامين الشمس" لأن الجسم يمكنه إنتاجه عند التعرض لأشعة الشمس <br>أعراض نقص فيتامين د تشمل الأعراض:
+
+                التعب والإرهاق
+                آلام العظام والمفاصل -
+                ضعف العضلات -
+                تساقط الشعر -
+                ضعف جهاز المناعة</div>
+        </div>
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <div class="question">
+                <span>ما الفرق بين البرد والإنفلونزا؟</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="answer">البرد: أعراضه خفيفة مثل انسداد الأنف والعطس والسعال، ولا يسبب ارتفاع حرارة شديد<br>
+                الإنفلونزا: أعراضها أشد مثل الحمى المرتفعة، آلام العضلات، الإرهاق الشديد، ويمكن أن تستمر لأيام طويلة
+                </div>
+        </div>
+    </div>
+    <div class="image-section">
+        <img src="img/2doctor.PNG" alt="صورة توضيحية">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <img src="img/logo1.png" alt="Home Lengo Logo">
+        <div class="social-icons-footer">
+            <span>تابعنا علي:</span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+        
+      <div class="footer-content">
+          <div class="footer-section about">
+              <p>نحن متخصصون في تقديم خدمات طبية عالية المستوى في جميع التخصصات. اتصل بنا</p>
+              <ul class="contact">
+                  <li><i class="fas fa-map-marker-alt"></i> شبين الكوم - شارع الجلاء </li>
+                  <li><i class="fa-solid fa-phone"></i> 01020304050</li>
+                  <li><i class="fas fa-envelope"></i> medical@gmail.com</li>
+              </ul>
+          </div>
+          <div class="footer-section links">
+            <h2>روابط الموقع</h2>
+            <ul>
+                <li><a href="medical.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="doctors.html">الأطباء</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+        
+          
+ 
+          <div class="footer-section hours">
+            <h2>مواعيد العمل</h2>
+            <ul>
+                <li><i class="fas fa-clock"></i> سبت - اثنين - اربعاء: 8:00 ص - 8:00 م</li>
+                <li><i class="fas fa-clock"></i> حد - ثلاثاء - خميس: 9:00 ص - 3:00 م</li>
+                <li><i class="fas fa-clock"></i> الجمعة: 11:00 ص - 9:00 م</li>
+            </ul>
+        </div>
+        <div class="footer-section images-grid">
+            <div class="grid-container">
+                <img src="img/about1.jpg" alt="صورة 1">
+                <img src="img/about2.jpg" alt="صورة 2">
+                <img src="img/about3.jpg" alt="صورة 3">
+                <img src="img/about4.jpg" alt="صورة 4">
+            </div>
+        </div>
+         
+          
+      </div>
+    </div>
+ 
+    <div class="footer-bottom">
+        <p>Copyright ©2025 <a href="https://gmg-company.com/" ><span>GMG COMPANY</span></a>جميع الحقوق محفوظة</p>
+        <ul class="policy-links">
+            <li><a href="#">شروط الخدمة</a></li>
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">التعليمات</a></li>
+        </ul>
+    </div>
+ </footer>
+
+
+<!-- GO TO TOP  السهم ف اخر الصفحه اللي بيطلع لفوق بالصفحة-->
+
+<a href="#top" class="go-top active" data-go-top="">
+    <ion-icon name="arrow-up" role="img" class="md hydrated" aria-label="arrow up"></ion-icon>
+</a>
+
+<script>
+    function toggleAnswer(element) {
+        let answer = element.querySelector(".answer");
+        let arrow = element.querySelector(".arrow");
+        let isVisible = answer.style.display === "block";
+        document.querySelectorAll(".faq-item").forEach(item => {
+            item.classList.remove("active");
+            item.querySelector(".answer").style.display = "none";
         });
-    </script>
-
-
-
-
-
-
-
-
-
-
-
+        if (!isVisible) {
+            answer.style.display = "block";
+            element.classList.add("active");
+        }
+    }
+</script>
 
 <script src="medical.js"></script>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.3/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 </body>
 </html>  

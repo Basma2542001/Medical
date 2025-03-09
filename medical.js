@@ -62,7 +62,7 @@ window.addEventListener("scroll", function () {
     if (window.scrollY >= 200) {   
         goToBtn.classList.add("active");
     } else { 
-        goToBtn.classList.remove("active");
+        goToBtn.classList.remove("active"); 
     }
 } );
 
