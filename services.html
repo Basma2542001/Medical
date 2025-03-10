@@ -11,11 +11,251 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+   
    <link rel="stylesheet" href="medical.css">
    
-  
+
+   <style>
+    .homeservices {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), 
+                url('img/background.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            flex-direction: column;
+    }
+
+    .homeservices-content h3 {
+            font-size: 35px;
+            text-transform: uppercase;
+            text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+     
+    .homeservices-content a{
+        color: #fff;
+    }
+    .homeservices-content a:hover{
+        color: #007bff;
+    }
+
+
+
+
+
+   /*--------------------------------------- services ---------------*/
    
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+        .servicestext{
+            font-size: 20px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        .servicesp{
+            font-size: 14px;
+            text-align: center;
+        }
+        .service {
+            position: relative;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            text-align: right;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 20px;
+        }
+        .service::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(51, 131, 250, 0.7); 
+        }
+        .service-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .service-content i {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        .service-content h3{
+            font-size: 17px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .service-content p{
+            font-size: 12px;
+        }
+        .service1 { background: url('img/heart...PNG') center/cover; }
+        .service2 { background: url('img/skin.jpg') center/cover; }
+        .service3 { background: url('img/stomach.jpg') center/cover; }
+        .service4 { background: url('img/eye.PNG') center/cover; }
+        .service5 { background: url('img/Nerves.jpg') center/cover; }
+        .service6 { background: url('img/bones1.jpg') center/cover; }
+
+
+
+
+       /*------------------------------------- steps ---------------*/
+       .steps-section {
+            position: relative;
+            padding: 60px 0;
+            text-align: center;
+            background: url('img/black\ background.png') no-repeat center center/cover;
+            color: white;
+        }
+
+        .stepshead {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .stepstext {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .steps-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+
+        .step {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 22%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            margin-top: 30px;
+        }
+
+        .step h5 {
+            font-size: 17px;
+        }
+
+        .step p {
+            font-size: 14px;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #007bff;
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            border: 3px solid #111;
+            z-index: 2;
+        }
+
+        /* الخط المنقط */
+        .line {
+            position: absolute;
+            top: -5px;
+            left: 10%;
+            width: 80%;
+            height: 0;
+            border-top: 4px dashed #fff;
+            z-index: 1;
+        }
+        
+
+     /*--------------------------------- team ---------------*/
+        .team-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 80px;
+            margin-bottom: 50px;
+        }
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: -70px;
+            border: 7px solid #007bff;
+        }
+        .card h3 {
+            margin: 10px 0;
+            color: #1a237e;
+            font-size: 17px;
+        }
+        .card p {
+            color: #616161;
+            font-size: 14px;
+        }
+       
+        .social-iconsservices {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .social-iconsservices a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 20px;
+            padding: 8px 15px;
+            border: 1px solid #007bff;
+            border-radius: 50%;
+            transition: transform 0.3s ease, color 0.3s;
+
+        }
+        .social-iconsservices a:hover {
+            transform: translateY(-5px);
+
+        }
+        .pcard{
+            margin-top: 8px;
+        }
+</style>    
 
 </head>
 
@@ -76,20 +316,214 @@
 </div>
 
 <!--------------------------------------------------------- home section -->
-<section class="home">
-    <div class="home-content">
-        <h3>أفضل علاج ورعاية لحياة صحية جيدة</h3>
-        <p>نحن هنا لمساعدتك والاطمئنان على صحتك</p>
-        <a href="#" class="btnhome">احجز الآن</a>
+<section class="homeservices">
+    <div class="homeservices-content">
+        <h3>الخدمات/ <a href="medical.html"> الرئيسية</a></h3>
     </div>
 </section>
 
 
 
+<!--------------------------------------------- services ---------------------->
+<h1 class="servicestext">خدماتنا الطبية</h1>
+<p class="servicesp">تشمل الخدمات الطبية الوقاية والتشخيص والعلاج والتأهيل لضمان صحة الأفراد وتحسين جودة الحياة</p>
+<div class="services">
+    <div class="service service1">
+        <div class="service-content">
+            <i class="fas fa-heartbeat"></i>
+            <h3>أمراض القلب</h3>
+            <p> تشخيص وعلاج لحالات القلب، مثل ارتفاع ضغط الدم والجلطات واضطرابات النبض، مع تقديم استشارات للوقاية وتحسين صحة القلب</p>
+        </div>
+    </div>
+    <div class="service service2">
+        <div class="service-content">
+            <i class="fas fa-stethoscope"></i>
+            <h3>أمراض جلدية</h3>
+            <p> تشخيص وعلاج لمشاكل الجلد مثل الأكزيما، والصدفية، وحب الشباب، مع العناية بالبشرة والوقاية من الأمراض الجلدية</p>
+        </div>
+    </div>
+    <div class="service service3">
+        <div class="service-content">
+            <i class="fas fa-procedures"></i>
+            <h3>أمراض المعدة</h3>
+            <p>تشخيص وعلاج لحالات المعدة مثل القرحة، والارتجاع المريئي، والتهابات المعدة، مع تقديم إرشادات لتحسين الهضم </p>
+        </div>
+    </div>
+    <div class="service service4">
+        <div class="service-content">
+            <i class="fas fa-eye"></i>
+            <h3>العناية بالعيون</h3>
+            <p>تشخيص وعلاج لمشاكل الرؤية وأمراض العين مثل المياه البيضاء، والجلوكوما، والتهابات العين، مع تقديم الرعاية اللازمة للحفاظ على صحة البصر</p>
+        </div>
+    </div>
+    <div class="service service5">
+        <div class="service-content">
+            <i class="fas fa-brain"></i>
+            <h3>الأعصاب</h3>
+            <p> تشخيص وعلاج لاضطرابات الجهاز العصبي مثل الصداع النصفي، والصرع، والتصلب المتعدد، مع متابعة الحالات لتحسين وظائف الدماغ والأعصاب</p>
+        </div>
+    </div>
+    <div class="service service6">
+        <div class="service-content">
+            <i class="fas fa-bone"></i>
+            <h3>العظام</h3>
+            <p>تشخيص وعلاج لإصابات وكسور العظام، وهشاشة العظام، والتهاب المفاصل، مع تقديم الرعاية اللازمة لتحسين الحركة والصحة الهيكلية</p>
+        </div>
+    </div>
+</div>
 
 
+<!---------------------------------------- steps ------------->
+<section class="steps-section">
+    <h2 class="stepshead">كيف نساعدك؟</h2>
+    <p class="stepstext">يقدم أطبائنا دائمًا أفضل خدمات الرعاية الصحية لعلاج جميع أنواع المرضى</p>
+
+    <div class="steps-container">
+        <div class="line"></div>
+
+        <div class="step">
+            <div class="step-number">01</div>
+            <h5>احجز موعد</h5>
+            <p>يمكنك حجز موعد مع طبيبك بسهولة لضمان حصولك على الرعاية الطبية في الوقت المناسب</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">02</div>
+            <h5>إجراء الفحص</h5>
+            <p>نقوم بإجراء فحص طبي شامل مع طبيبك للاطمئنان على صحتك والكشف المبكر عن أي مشكلات صحية</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">03</div>
+            <h5>تلقي العلاج</h5>
+            <p>تلقي العلاج المناسب تحت إشراف طبي متخصص لضمان التعافي السريع وتحسين حالتك الصحية</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">04</div>
+            <h5>كيف تأخذ العلاج</h5>
+            <p>تحديد الخطة العلاجية المناسبة، والتي قد تشمل الأدوية، الجلسات العلاجية، أو الإجراءات الطبية، مع متابعة مستمرة</p>
+        </div>
+    </div>
+</section>
 
 
+<!---------------------------------------- team -------------->
+<div class="team-container">
+    <div class="card">
+        <img src="img/doctor1.jpg" alt="د/ مازن علي">
+        <h3>د/  مازن علي</h3>
+        <p>أخصائي التغذية</p>
+        <p class="pcard">خبير في علم التغذية يعمل على تقييم احتياجات الأفراد من الغذاء، وتصميم خطط غذائية متوازنة لتحسين صحتهم أو تحقيق أهداف معينة</p>
+
+        <div class="social-iconsservices">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="img/doctor3.jpg" alt="د/ ميرا حازم">
+        <h3>د/ ميرا حازم</h3>
+        <p>طبيبة أطفال</p>
+        <p class="pcard">نهتم بالنمو الجسدي والعقلي للأطفال، ونعمل على الوقاية من الأمراض وتقديم الإرشادات اللازمة للأهل للحفاظ على صحة أطفالهم</p>
+
+        <div class="social-iconsservices">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="img/doctor2.jpg" alt="د/ حمزه احمد">
+        <h3>د/ حمزه احمد</h3>
+        <p>أخصائي الطب النفسي</p>
+        <p class="pcard">تشخيص وعلاج الاضطرابات النفسية والعقلية والسلوكية - فهم الأسباب البيولوجية والنفسية والاجتماعية التي تؤثر على الصحة العقلية</p>
+        <div class="social-iconsservices">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <img src="img/logo1.png" alt="Home Lengo Logo">
+        <div class="social-icons-footer">
+            <span>تابعنا علي:</span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+        
+      <div class="footer-content">
+          <div class="footer-section about">
+              <p>نحن متخصصون في تقديم خدمات طبية عالية المستوى في جميع التخصصات. اتصل بنا</p>
+              <ul class="contact">
+                  <li><i class="fas fa-map-marker-alt"></i> شبين الكوم - شارع الجلاء </li>
+                  <li><i class="fa-solid fa-phone"></i> 01020304050</li>
+                  <li><i class="fas fa-envelope"></i> medical@gmail.com</li>
+              </ul>
+          </div>
+          <div class="footer-section links">
+            <h2>روابط الموقع</h2>
+            <ul>
+                <li><a href="medical.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="doctors.html">الأطباء</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+        
+          
+ 
+          <div class="footer-section hours">
+            <h2>مواعيد العمل</h2>
+            <ul>
+                <li><i class="fas fa-clock"></i> سبت - اثنين - اربعاء: 8:00 ص - 8:00 م</li>
+                <li><i class="fas fa-clock"></i> حد - ثلاثاء - خميس: 9:00 ص - 3:00 م</li>
+                <li><i class="fas fa-clock"></i> الجمعة: 11:00 ص - 9:00 م</li>
+            </ul>
+        </div>
+        <div class="footer-section images-grid">
+            <div class="grid-container">
+                <img src="img/about1.jpg" alt="صورة 1">
+                <img src="img/about2.jpg" alt="صورة 2">
+                <img src="img/about3.jpg" alt="صورة 3">
+                <img src="img/about4.jpg" alt="صورة 4">
+            </div>
+        </div>
+         
+          
+      </div>
+    </div>
+ 
+    <div class="footer-bottom">
+        <p>Copyright ©2025 <a href="https://gmg-company.com/" ><span>GMG COMPANY</span></a>جميع الحقوق محفوظة</p>
+        <ul class="policy-links">
+            <li><a href="#">شروط الخدمة</a></li>
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">التعليمات</a></li>
+        </ul>
+    </div>
+ </footer>
+
+
+<!-- GO TO TOP  السهم ف اخر الصفحه اللي بيطلع لفوق بالصفحة-->
+
+<a href="#top" class="go-top active" data-go-top="">
+    <ion-icon name="arrow-up" role="img" class="md hydrated" aria-label="arrow up"></ion-icon>
+</a>
 
 
 <script src="medical.js"></script>
@@ -97,7 +531,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.3/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 </body>
 </html>  
