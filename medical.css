@@ -134,7 +134,9 @@ flex-direction: column;
     color: #00a2ff;
     font-size: 18px;
 }
-
+.navbar a:hover{
+    color: #000;
+}
 .icons {
     display: flex;
     gap: 15px; 

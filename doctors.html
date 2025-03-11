@@ -14,7 +14,156 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
    <link rel="stylesheet" href="medical.css">
    
-  
+<style>
+     .homedoctor {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), 
+                url('img/background.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            flex-direction: column;
+    }
+
+    .homedoctor-content h3 {
+            font-size: 35px;
+            text-transform: uppercase;
+            text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+     
+    .homedoctor-content a{
+        color: #fff;
+    }
+    .homedoctor-content a:hover{
+        color: #007bff;
+    }
+
+
+
+    /*----------------------------------- doctors ---------*/
+    
+    .team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; 
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.card-doctor {
+    background: #007bff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;  
+    max-width: 350px; 
+    text-align: center;
+    flex-grow: 1;
+}
+
+.card-doctor img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -100px;
+    border: 7px solid #fff;
+}
+
+.card-doctor h3 {
+    margin: 10px 0;
+    color: #fff;
+    font-size: 18px;
+}
+
+.card-doctor p {
+    color: #fff;
+    font-size: 15px;
+}
+
+.social-iconsdoctor {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-iconsdoctor a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 16px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease, color 0.3s;
+}
+
+.social-iconsdoctor a:hover {
+    transform: translateY(-5px);
+}
+
+.pcard {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+/* الخط الفاصل */
+.separator {
+    border: 0;
+    height: 1px;
+    background: #fff;
+    margin: 15px 0;
+}
+
+.contact-info-doctor {
+    text-align: right;
+    padding-right: 0px; 
+}
+
+.contact-info-doctor p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    margin: 5px 0;
+    color: #fff;
+}
+
+.contact-info-doctor p a{
+    color: #fff;
+}
+.contact-info-doctor p a:hover{
+    color: #000;
+}
+.contact-info-doctor i {
+    color: #fff;
+    margin-left: 8px; 
+    font-size: 16px;
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.read-more-btn {
+    display: block;
+    width: fit-content;
+    margin-left: auto; 
+    padding: 10px 15px;
+    background: #fff;
+    color: #0271e9;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 60%;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.read-more-btn:hover {
+    color: #000;
+}
+</style>  
    
 
 </head>
@@ -76,19 +225,233 @@
 </div>
 
 <!--------------------------------------------------------- home section -->
-<section class="home">
-    <div class="home-content">
-        <h3>أفضل علاج ورعاية لحياة صحية جيدة</h3>
-        <p>نحن هنا لمساعدتك والاطمئنان على صحتك</p>
-        <a href="#" class="btnhome">احجز الآن</a>
+<section class="homedoctor">
+    <div class="homedoctor-content">
+        <h3>الاطباء /<a href="medical.html"> الرئيسية</a></h3>
     </div>
 </section>
 
 
+<!----------------------------------------------- doctors ------------------>
+<div class="team-container">
+    <div class="card-doctor">
+        <img src="img/doctor1.jpg" alt="د/ مازن علي">
+        <h3>د/  مازن علي</h3>
+        <p>أخصائي التغذية</p>
+        <hr class="separator">
+
+        <p class="pcard">خبير في علم التغذية يعمل على تقييم احتياجات الأفراد من الغذاء، وتصميم خطط غذائية متوازنة لتحسين صحتهم أو تحقيق أهداف معينة</p>
+        <div class="contact-info-doctor">
+            <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
+            <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
+        </div>
+        <a href="#" class="read-more-btn">اقرأ المزيد</a>
+        
+    </div>
+    <div class="card-doctor">
+        <img src="img/doctor3.jpg" alt="د/ ميرا حازم">
+        <h3>د/ ميرا حازم</h3>
+        <p>طبيبة أطفال</p>
+        <hr class="separator">
+
+        <p class="pcard">نهتم بالنمو الجسدي والعقلي للأطفال، ونعمل على الوقاية من الأمراض وتقديم الإرشادات اللازمة للأهل للحفاظ على صحة أطفالهم</p>
+        <div class="contact-info-doctor">
+            <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
+            <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
+        </div>
+        <a href="#" class="read-more-btn">اقرأ المزيد</a>
+        
+    </div>
+    <div class="card-doctor">
+        <img src="img/doctor2.jpg" alt="د/ حمزه احمد">
+        <h3>د/ حمزه احمد</h3>
+        <p>أخصائي الطب النفسي</p>
+        <hr class="separator">
+
+        <p class="pcard">تشخيص وعلاج الاضطرابات النفسية والعقلية والسلوكية - فهم الأسباب البيولوجية والنفسية والاجتماعية التي تؤثر على الصحة العقلية</p>
+        <div class="contact-info-doctor">
+            <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
+            <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
+        </div>
+        <a href="#" class="read-more-btn">اقرأ المزيد</a>
+        
+    </div>
+    
+    
+</div>
+
+<div class="team-container">
+    <div class="card-doctor">
+        <img src="img/doctor1.jpg" alt="د/ مازن علي">
+        <h3>د/  مازن علي</h3>
+        <p>أخصائي التغذية</p>
+        <hr class="separator">
+
+        <p class="pcard">خبير في علم التغذية يعمل على تقييم احتياجات الأفراد من الغذاء، وتصميم خطط غذائية متوازنة لتحسين صحتهم أو تحقيق أهداف معينة</p>
+        <div class="contact-info-doctor">
+            <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
+            <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
+        </div>
+        <a href="#" class="read-more-btn">اقرأ المزيد</a>
+        
+    </div>
+    <div class="card-doctor">
+        <img src="img/doctor3.jpg" alt="د/ ميرا حازم">
+        <h3>د/ ميرا حازم</h3>
+        <p>طبيبة أطفال</p>
+        <hr class="separator">
+
+        <p class="pcard">نهتم بالنمو الجسدي والعقلي للأطفال، ونعمل على الوقاية من الأمراض وتقديم الإرشادات اللازمة للأهل للحفاظ على صحة أطفالهم</p>
+        <div class="contact-info-doctor">
+            <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
+            <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
+        </div>
+        <a href="#" class="read-more-btn">اقرأ المزيد</a>
+        
+    </div>
+    <div class="card-doctor">
+        <img src="img/doctor2.jpg" alt="د/ حمزه احمد">
+        <h3>د/ حمزه احمد</h3>
+        <p>أخصائي الطب النفسي</p>
+        <hr class="separator">
+
+        <p class="pcard">تشخيص وعلاج الاضطرابات النفسية والعقلية والسلوكية - فهم الأسباب البيولوجية والنفسية والاجتماعية التي تؤثر على الصحة العقلية</p>
+        <div class="contact-info-doctor">
+            <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
+            <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
+        </div>
+        <a href="#" class="read-more-btn">اقرأ المزيد</a>
+        
+    </div>
+    
+    
+</div>
+
+
+<div class="team-container">
+    <div class="card-doctor">
+        <img src="img/doctor1.jpg" alt="د/ مازن علي">
+        <h3>د/  مازن علي</h3>
+        <p>أخصائي التغذية</p>
+        <hr class="separator">
+
+        <p class="pcard">خبير في علم التغذية يعمل على تقييم احتياجات الأفراد من الغذاء، وتصميم خطط غذائية متوازنة لتحسين صحتهم أو تحقيق أهداف معينة</p>
+        <div class="contact-info-doctor">
+            <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
+            <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
+        </div>
+        <a href="#" class="read-more-btn">اقرأ المزيد</a>
+        
+    </div>
+    <div class="card-doctor">
+        <img src="img/doctor3.jpg" alt="د/ ميرا حازم">
+        <h3>د/ ميرا حازم</h3>
+        <p>طبيبة أطفال</p>
+        <hr class="separator">
+
+        <p class="pcard">نهتم بالنمو الجسدي والعقلي للأطفال، ونعمل على الوقاية من الأمراض وتقديم الإرشادات اللازمة للأهل للحفاظ على صحة أطفالهم</p>
+        <div class="contact-info-doctor">
+            <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
+            <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
+        </div>
+        <a href="#" class="read-more-btn">اقرأ المزيد</a>
+        
+    </div>
+    <div class="card-doctor">
+        <img src="img/doctor2.jpg" alt="د/ حمزه احمد">
+        <h3>د/ حمزه احمد</h3>
+        <p>أخصائي الطب النفسي</p>
+        <hr class="separator">
+
+        <p class="pcard">تشخيص وعلاج الاضطرابات النفسية والعقلية والسلوكية - فهم الأسباب البيولوجية والنفسية والاجتماعية التي تؤثر على الصحة العقلية</p>
+        <div class="contact-info-doctor">
+            <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
+            <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
+        </div>
+        <a href="#" class="read-more-btn">اقرأ المزيد</a>
+        
+    </div>
+    
+    
+</div>
 
 
 
 
+<!--------------------------------------- footer ------------------------->
+<footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <img src="img/logo1.png" alt="Home Lengo Logo">
+        <div class="social-icons-footer">
+            <span>تابعنا علي:</span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+        
+      <div class="footer-content">
+          <div class="footer-section about">
+              <p>نحن متخصصون في تقديم خدمات طبية عالية المستوى في جميع التخصصات. اتصل بنا</p>
+              <ul class="contact">
+                  <li><i class="fas fa-map-marker-alt"></i> شبين الكوم - شارع الجلاء </li>
+                  <li><i class="fa-solid fa-phone"></i> 01020304050</li>
+                  <li><i class="fas fa-envelope"></i> medical@gmail.com</li>
+              </ul>
+          </div>
+          <div class="footer-section links">
+            <h2>روابط الموقع</h2>
+            <ul>
+                <li><a href="medical.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="doctors.html">الأطباء</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+        
+          
+ 
+          <div class="footer-section hours">
+            <h2>مواعيد العمل</h2>
+            <ul>
+                <li><i class="fas fa-clock"></i> سبت - اثنين - اربعاء: 8:00 ص - 8:00 م</li>
+                <li><i class="fas fa-clock"></i> حد - ثلاثاء - خميس: 8:00 ص - 8:00 م</li>
+                <li><i class="fas fa-clock"></i> الجمعة: 11:00 ص - 9:00 م</li>
+            </ul>
+        </div>
+        <div class="footer-section images-grid">
+            <div class="grid-container">
+                <img src="img/about1.jpg" alt="صورة 1">
+                <img src="img/about2.jpg" alt="صورة 2">
+                <img src="img/about3.jpg" alt="صورة 3">
+                <img src="img/about4.jpg" alt="صورة 4">
+            </div>
+        </div>
+         
+          
+      </div>
+    </div>
+ 
+    <div class="footer-bottom">
+        <p>Copyright ©2025 <a href="https://gmg-company.com/" ><span>GMG COMPANY</span></a>جميع الحقوق محفوظة</p>
+        <ul class="policy-links">
+            <li><a href="#">شروط الخدمة</a></li>
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">التعليمات</a></li>
+        </ul>
+    </div>
+ </footer>
+
+
+<!-- GO TO TOP  السهم ف اخر الصفحه اللي بيطلع لفوق بالصفحة-->
+
+<a href="#top" class="go-top active" data-go-top="">
+    <ion-icon name="arrow-up" role="img" class="md hydrated" aria-label="arrow up"></ion-icon>
+</a>
 
 
 <script src="medical.js"></script>
@@ -96,7 +459,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.3/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 </body>
 </html>  
