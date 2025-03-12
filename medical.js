@@ -1,8 +1,8 @@
 let loginBtn = document.getElementById("login-btn");
-        let loginForm = document.querySelector(".login-form-container");
-        let formClose = document.getElementById("form-close");
-        let menuBar = document.getElementById("menu-bar");
-        let navbar = document.querySelector(".navbar");
+let loginForm = document.querySelector(".login-form-container");
+let formClose = document.getElementById("form-close");
+let menuBar = document.getElementById("menu-bar");
+let navbar = document.querySelector(".navbar");
 
         loginBtn.onclick = () => loginForm.classList.add("active");
         formClose.onclick = () => loginForm.classList.remove("active");
@@ -10,11 +10,11 @@ let loginBtn = document.getElementById("login-btn");
         let menu = document.querySelector(".navbar");
 let menuBtn = document.querySelector("#menu-bar");
 
-// تبديل الأيقونة وفتح/إغلاق القائمة
+// تبديل الأيقونة 
 menuBtn.onclick = () => {
     menu.classList.toggle("active");
 
-    // تغيير الأيقونة بين (☰) و (✖)
+    // تغيير الأيقونة 
     if (menu.classList.contains("active")) {
         menuBtn.classList.replace("fa-bars", "fa-times");
     } else {
@@ -25,18 +25,23 @@ menuBtn.onclick = () => {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    let registerBtn = document.getElementById("register-btn");
+    let registerForm = document.querySelector(".register-form-container");
+    let registerFormClose = document.getElementById("register-form-close");
 
+    // فتح فورم التسجيل عند الضغط على الأيقونة
+    registerBtn.onclick = () => {
+        registerForm.classList.add("active");
+    };
 
+    // إغلاق فورم التسجيل عند الضغط على زر الإغلاق
+    registerFormClose.onclick = () => {
+        registerForm.classList.remove("active");
+    };
 
-
-
-
-
-
-
-
-
-
+    
+});
 
 
 

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,  initial-scale= 1.0">
+   <title>medical</title>
+
+
+   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+   <link rel="stylesheet" href="medical.css">
+   
+<style>
+    .homedoctor {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), 
+                url('img/background.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            flex-direction: column;
+    }
+
+    .homedoctor-content h3 {
+            font-size: 35px;
+            text-transform: uppercase;
+            text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+     
+    .homedoctor-content a{
+        color: #fff;
+    }
+    .homedoctor-content a:hover{
+        color: #007bff;
+    }
+
+    
+    /*------------------------------------------- doctor detailes --------------*/
+    .container {
+            width: 100%;
+            margin: auto;
+        }
+        .doctor-header {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .doctor-header img {
+            width: 50%;
+            height: 500px;
+            border-radius: 10px;
+        }
+        .doctor-info {
+            width: 50%;
+            padding: 20px;
+        }
+        .doctor-info h2 {
+            margin: 0;
+            color: #0f0f0f;
+            font-size: 30px;
+        }
+        .doctor-info p {
+            color: #666;
+            font-size: 15px;
+            margin-top: 20px;
+        }
+        .doctor-info .text{
+            color: #666;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+        .social-iconsdetailes {
+            display: flex;
+            justify-content: right;
+            gap: 10px;
+            margin-top: 25px;
+        }
+        .social-iconsdetailes a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 15px;
+            padding: 8px 15px;
+            border: 1px solid #007bff;
+            border-radius: 50%;
+            transition: transform 0.3s ease, color 0.3s;
+
+        }
+        .social-iconsdetailes a:hover {
+            transform: translateY(-5px);
+
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .section h3 {
+            color: #333;
+            font-size: 30px;
+        }
+        .section p{
+            font-size: 16px;
+        }
+        .grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 98%;
+        }
+        .grid div {
+            width: 33.33%;
+        }
+        .grid h3{
+            font-size: 20px;
+        }
+        .grid li{
+            font-size: 14.8px;
+        }
+        @media (max-width: 768px) {
+            .doctor-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .doctor-header img, .doctor-info {
+                width: 100%;
+            }
+            .grid div {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+
+     /*--------------------------- form -----------*/
+     .containerdetailes-book {
+    display: flex;
+    max-width: 1200px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 0px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center; 
+    align-items: center; 
+    gap: 40px; 
+    margin: auto; 
+    min-height: 80vh; 
+}
+
+.formdetailes-container {
+    width: 60%;
+    background: white;
+    color: black;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formdetailes-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #2a3f5f; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+}
+.formdetailes-header .h3{
+    margin: 0;
+    font-size: 20px;
+}
+.phone-icon {
+    width: 50px;
+    height: 50px;
+    background: #00bcd4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.phone-icon i {
+    font-size: 18px;
+}
+.form-body {
+    width: 100%;
+    padding: 40px;
+    background: white; 
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+   
+}
+.formdetailes-container .formdetailes-group {
+    display: flex;
+    gap: 10px;
+    width: 90%;
+}
+.formdetailes-container input, .formdetailes-container select {
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #222;
+    border-radius: 50px;
+}
+.formdetailes-container textarea {
+    width: 100%;
+    height: 140px;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #222;
+    border-radius: 20px;
+}
+.formdetailes-container a {
+    background: #00a2ff;
+    border: none;
+    padding: 8px 20px;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    width: auto;
+    margin-top: 10px;
+    border: 1px solid #00a2ff;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.formdetailes-container a:hover{
+    background: #fff;
+    color: #00a2ff;
+    border: 1px solid #00a2ff;
+    
+}
+
+
+
+
+/* مربع التواصل */
+.contact-box {
+    width: 40%;
+    background: #007bff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+   
+}
+.contact-box .contact-head{
+    font-size: 20px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    background: #fff;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-item i {
+    font-size: 24px;
+    color: #fff;
+    background: #007bff;
+    padding: 15px 17px;
+    border-radius: 50%;
+}
+
+.contact-item h4 {
+    margin: 0;
+    font-size: 19px;
+    color: #007bff;
+    text-align: left;
+}
+
+.contact-item p {
+    margin: 5px 0 0;
+    color: #007bff;
+    font-size: 14px;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+ 
+<!-- Top Header -->
+<div class="top-header">
+    <div class="contact-info">
+        <span>
+            <i class="fas fa-phone"></i> 
+            <a href="tel:+123456789" style="color: white; text-decoration: none;">+123 456 789</a>
+        </span>
+        <span>
+            <i class="fas fa-envelope"></i> 
+            <a href="mailto:info@medical.com" style="color: white; text-decoration: none;">info@medical.com</a>
+        </span>
+    </div>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</div>
+
+<header>
+    <div id="menu-bar" class="fas fa-bars"></div> 
+    <a href="#" class="logo">Medical</a>
+    <nav class="navbar">
+
+        <a href="medical.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="services.html">الخدمات</a>
+        <a href="doctors.html">الأطباء</a>
+        <a href="contact.html">اتصل بنا</a>
+    </nav>
+    <div class="icons">
+        <i class="fas fa-user" id="login-btn" title="تسجيل الدخول"></i>
+        <i class="fas fa-user-plus" id="register-btn" title="إنشاء حساب"></i>
+    </div>
+</header>
+
+<!-- login -->
+<div class="login-form-container">
+    <i class="fas fa-times" id="form-close"></i>
+   
+    <form action="">
+        <h3>تسجيل الدخول</h3>
+        <input type="email" class="box" placeholder="ادخل البريد الالكتروني">
+        <input type="password" class="box" placeholder="ادخل كلمة المرور">
+        <input type="submit" value="تسجيل الدخول" class="btnlogin">
+        <input type="checkbox" id="remember">
+        <label for="remember">ذكرني</label>
+        <p>هل نسيت كلمة المرور؟ <a href="#">اضغط هنا</a></p>
+        <p>هل لا تمتلك حساب؟ <a href="#"> سجل الآن</a></p>
+     </form>
+
+</div>
+
+<!--------------------------------------------------------- home section -->
+<section class="homedoctor">
+    <div class="homedoctor-content">
+        <h3>الاطباء /<a href="medical.html"> الرئيسية</a></h3>
+    </div>
+</section>
+
+
+
+
+<!----------------------------------------------- doctor detailes ---------->
+<div class="container">
+    <div class="doctor-header">
+        <img src="img/doctor2.jpg" alt="صورة الدكتور">
+        <div class="doctor-info">
+            <h2>د. أحمد فايز</h2>
+            <p class="text">أخصائي علاج طبيعي</p>
+            <p>متخصص في علاج الإصابات الرياضية وتأهيل اللاعبين لاستعادة أدائهم البدني - 
+                خبرة في إعادة التأهيل بعد العمليات الجراحية مثل جراحات العظام والعمود الفقري - 
+                ساعد مئات المرضى على تحسين قدرتهم الحركية وتقليل الألم من خلال برامج علاجية متكاملة - أكثر من 10 سنوات من الخبرة في مجال العلاج الطبيعي وإعادة التأهيل -
+                عمل في العديد من المستشفيات والمراكز الطبية المرموقة، حيث أشرف على خطط علاجية مخصصة لمختلف الحالات <br><br> بكالوريوس العلاج الطبيعي  جامعة القاهرة - دبلومة في العلاج بالإبر الجافة وتقويم العظام – أكاديمية العلاج الطبيعي الدولية - حاصل على عدة دورات تدريبية متقدمة في العلاج الكهربائي، التمارين العلاجية، والعلاج بالليزر - شهادة تقدير من مستشفى كبرى تقديرًا لإنجازاته في إعادة التأهيل الحركي</p>
+            <div class="social-iconsdetailes">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>  
+        </div>
+    </div>
+    
+    <div class="section">
+        <h3>مقدمة</h3>
+        <p>د. أحمد فايز هو أخصائي علاج طبيعي متميز بخبرة واسعة في تأهيل المرضى وتحسين وظائفهم الحركية. يمتلك د. أحمد سجلًا حافلًا في مساعدة المرضى على التعافي من الإصابات المختلفة، سواء كانت ناجمة عن الرياضة، العمليات الجراحية، أو الحالات المزمنة مثل التهاب المفاصل والآلام العضلية. 
+            يتميز د. أحمد بأسلوبه العلاجي الشامل الذي يجمع بين التمارين العلاجية، العلاج اليدوي، والتحفيز الكهربائي، مما يساعد المرضى على استعادة الحركة وتقليل الألم بطريقة فعالة وآمنة. كما يحرص على توعية مرضاه بأساليب الوقاية من الإصابات وتحسين نمط حياتهم من خلال التمارين الصحيحة والوضعيات السليمة. 
+            بفضل خبرته ومهاراته، أصبح د. أحمد فايز أحد الأسماء البارزة في مجال العلاج الطبيعي، حيث يساعد مرضاه على تحقيق أفضل أداء جسدي واستعادة نشاطهم اليومي بثقة وراحة</p>
+    </div>
+    
+    <div class="section grid">
+        
+        <div>
+            <h3>متخصص في :</h3>
+            <ul>
+                <li>تحسين اللياقة القلبية بعد الجلطات وجراحات القلب</li>
+                <li>علاج آلام الظهر، خشونة المفاصل، وهشاشة العظام</li>
+                <li>مساعدة مرضى الربو والتليف الرئوي على تحسين التنفس</li>
+            </ul>
+        </div>
+        <div>
+            <h3>متخصص في :</h3>
+
+            <ul>
+                <li>دعم المرأة خلال الحمل وبعد الولادة</li>
+                <li>علاج الإصابات الرياضية وتحسين الأداء البدني</li>
+                <li>اعادة تأهيل مرضى الجلطات، الشلل، والتصلب المتعدد</li>
+            </ul>
+        </div>
+        <div>
+            <h3>متخصص في :</h3>
+
+            <ul>
+                <li>علاج مشكلات العضلات مثل التشنجات والضعف العضلي</li>
+                <li>علاج الحالات مثل الحثل العضلي والضمور العضلي التدريجي</li>
+                <li>علاج مشاكل الفقرات مثل الانزلاق الغضروفي وآلام الرقبة والظهر</li>
+            </ul>
+        </div>
+      
+    </div>
+</div>
+
+
+<!------------------------------------------------- form ------------->
+<div class="containerdetailes-book">
+    <div class="contact-box">
+        <h2 class="contact-head">بيانات التواصل مع طبيبك</h2>
+        <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+                <h4>رقم الهاتف</h4>
+                <p>+201020304050</p>
+            </div>
+        </div>
+        <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+                <h4>البريد الإلكتروني</h4>
+                <p>ahmedfayez@gmail.com</p>
+            </div>
+        </div>
+        <hr class="line">
+        <div class="contact-item">
+            <i class="fa-solid fa-map-marker-alt"></i>
+            <div>
+                <h4>العنوان</h4>
+                <p>القاهرة - مصر</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="formdetailes-container">
+        <div class="formdetailes-header">
+            <div class="phone-icon">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <h3 class="h3">احجز موعد مع طبيبك</h3>
+        </div>
+       
+        <div class="formdetailes-group">
+            <input type="text" placeholder="اسم المريض">
+            <input type="text" placeholder="سن المريض">
+        </div>
+        <div class="formdetailes-group">
+            <input type="tel" placeholder="رقم الهاتف">
+            <input type="date" placeholder="تاريخ الحجز">
+        </div>
+        <div class="formdetailes-group">
+            <textarea type="text" placeholder="اكتب رسالة"></textarea>
+        </div>
+        <a href="#">احجز موعد الآن</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--------------------------------------- footer ------------------------->
+<footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <img src="img/logo1.png" alt="Home Lengo Logo">
+        <div class="social-icons-footer">
+            <span>تابعنا علي:</span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+        
+      <div class="footer-content">
+          <div class="footer-section about">
+              <p>نحن متخصصون في تقديم خدمات طبية عالية المستوى في جميع التخصصات. اتصل بنا</p>
+              <ul class="contact">
+                  <li><i class="fas fa-map-marker-alt"></i> شبين الكوم - شارع الجلاء </li>
+                  <li><i class="fa-solid fa-phone"></i> 01020304050</li>
+                  <li><i class="fas fa-envelope"></i> medical@gmail.com</li>
+              </ul>
+          </div>
+          <div class="footer-section links">
+            <h2>روابط الموقع</h2>
+            <ul>
+                <li><a href="medical.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="doctors.html">الأطباء</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+        
+          
+ 
+          <div class="footer-section hours">
+            <h2>مواعيد العمل</h2>
+            <ul>
+                <li><i class="fas fa-clock"></i> سبت - اثنين - اربعاء: 8:00 ص - 8:00 م</li>
+                <li><i class="fas fa-clock"></i> حد - ثلاثاء - خميس: 8:00 ص - 8:00 م</li>
+                <li><i class="fas fa-clock"></i> الجمعة: 11:00 ص - 9:00 م</li>
+            </ul>
+        </div>
+        <div class="footer-section images-grid">
+            <div class="grid-container">
+                <img src="img/about1.jpg" alt="صورة 1">
+                <img src="img/about2.jpg" alt="صورة 2">
+                <img src="img/about3.jpg" alt="صورة 3">
+                <img src="img/about4.jpg" alt="صورة 4">
+            </div>
+        </div>
+         
+          
+      </div>
+    </div>
+ 
+    <div class="footer-bottom">
+        <p>Copyright ©2025 <a href="https://gmg-company.com/" ><span>GMG COMPANY</span></a>جميع الحقوق محفوظة</p>
+        <ul class="policy-links">
+            <li><a href="#">شروط الخدمة</a></li>
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">التعليمات</a></li>
+        </ul>
+    </div>
+ </footer>
+
+
+<!-- GO TO TOP  السهم ف اخر الصفحه اللي بيطلع لفوق بالصفحة-->
+
+<a href="#top" class="go-top active" data-go-top="">
+    <ion-icon name="arrow-up" role="img" class="md hydrated" aria-label="arrow up"></ion-icon>
+</a>
+
+
+<script src="medical.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.3/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</body>
+</html>  

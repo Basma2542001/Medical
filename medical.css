@@ -230,7 +230,7 @@ flex-direction: column;
 }
 
 /* --- Login Form --- */
-.login-form-container {
+.login-form-container, .register-form-container {
     position: fixed;
     top: -120%;
     left: 0;
@@ -243,11 +243,11 @@ flex-direction: column;
     justify-content: center;
 }
 
-.login-form-container.active {
+.login-form-container.active, .register-form-container.active {
     top: 0;
 }
 
-.login-form-container form{
+.login-form-container form, .register-form-container form{
     margin:2rem;
     padding:1.5rem 2rem;
     border-radius: .5rem;
@@ -255,7 +255,7 @@ flex-direction: column;
     width:50rem;
 }
 
-.login-form-container form h3{
+.login-form-container form h3, .register-form-container form h3{
     font-size: 3rem;
     color: #444;
     text-transform: uppercase;
@@ -263,7 +263,7 @@ flex-direction: column;
     padding: 1rem 0 ;
 
 }
-.login-form-container form .box{
+.login-form-container form .box, .register-form-container form .box{
     width: 100%;
     padding:1rem;
     font-size: 1.7rem;
@@ -272,45 +272,45 @@ flex-direction: column;
     border:.1rem solid rgba(0, 0, 0, .3);
     text-transform: none;
 }
-.login-form-container form .box:focus{
+.login-form-container form .box:focus , .register-form-container form .box:focus{
     border-color: var(--blue);
 }
 
-.login-form-container form #remember{
+.login-form-container form #remember , .register-form-container form #remember{
     margin:2rem 0;
 }
 
-.login-form-container form label{
+.login-form-container form label , .register-form-container form label{
     font-size: 1.5rem;
 }
 
-.login-form-container form .btnlogin{
+.login-form-container form .btnlogin , .register-form-container form .btnregister{
     display: block;
     width:100% ;
     background: #007bff;
     color: #fff;
     padding: 10px;
 }
-.login-form-container form .btnlogin:hover{
+.login-form-container form .btnlogin:hover , .register-form-container form .btnregister:hover{
     background: rgba(0, 0, 0, .7); 
 }
 
-.login-form-container form p{
+.login-form-container form p, .register-form-container form p{
     padding:.5rem 0;
     font-size: 1.5rem;
     color: #666;
 }
 
-.login-form-container form p a{
+.login-form-container form p a , .register-form-container form p a{
     color: var(--blue);
 }
 
-.login-form-container form p a:hover{
+.login-form-container form p a:hover , .register-form-container form p a:hover{
     color: #333;
     text-decoration: underline;
 }
 
-#form-close {
+#form-close , #register-form-close{
     position: absolute;
     top: 20px;
     right: 30px;
