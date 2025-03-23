@@ -554,6 +554,7 @@ flex-direction: column;
 
 .images img:nth-child(1) {
     width: 50%;
+    height: 245px;
     position: absolute;
     top: 0;
     right: 60px;
