@@ -260,8 +260,115 @@
             border-radius: 50%;
         }
 
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-       
+    .text-section, .list-section {
+        width: 100%;
+    }
+
+    .banner {
+        justify-content: center;
+        height: auto;
+        padding: 30px;
+    }
+
+    .banner-content {
+        max-width: 100%;
+    }
+
+    .faq-section {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .image-section {
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .image-section img {
+        width: 60%;
+    }
+    .text-section h2,p{
+        text-align: right;
+    }
+}
+
+@media (max-width: 600px) {
+    .text-section, .list-section, .faq-section, .image-section {
+        width: 100%;
+    }
+
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .banner h2 {
+        font-size: 24px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+
+    .banner button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .faq-item .question span {
+        font-size: 16px;
+    }
+
+    .contactinfo {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .contact-text {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .image-section img {
+        width: 80%;
+    }
+    .text-section h2,p{
+        text-align: right;
+    }
+}
+@media (max-width: 768px) { 
+    .containerfaq {
+        flex-direction: column; /* جعل الصورة والأسئلة فوق بعض */
+        align-items: center;
+        text-align: center;
+    }
+
+    .faq-section {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .image-section {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .image-section img {
+        width: 60%;
+        max-width: 250px;
+    }
+}
    </style>
 
 </head>
@@ -345,13 +452,6 @@
 </section>
 
 
-
-
-
-
-
-
-
 <!--------------------------------------------- why we -------------->
 <div class="container">
     <div class="text-section">
@@ -367,9 +467,9 @@
     </div>
     <div class="list-section">
         <ul>
-            <li>نقدم ساعات عمل مرنة تناسب جدولك المزدحم.</li>
-            <li>فريقنا ملتزم بجعلك تشعر بالراحة.</li>
             <li>نضمن لك رعاية سريعة وفعالة.</li>
+            <li>فريقنا ملتزم بجعلك تشعر بالراحة.</li>
+            <li>نقدم ساعات عمل مرنة تناسب جدولك المزدحم.</li>
             <li>نساعدك على إدارة صحتك في كل مراحل الحياة.</li>
         </ul>
     </div>
