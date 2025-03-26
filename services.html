@@ -207,7 +207,7 @@
             margin-bottom: 50px;
         }
         .card {
-            background: #fff;
+            background: #007bff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -220,15 +220,17 @@
             border-radius: 50%;
             object-fit: cover;
             margin-top: -70px;
-            border: 7px solid #007bff;
+            border: 7px solid #fff;
+            clip-path: none !important; 
+            mask-image: none !important;
         }
         .card h3 {
             margin: 10px 0;
-            color: #1a237e;
+            color: #fff;
             font-size: 17px;
         }
         .card p {
-            color: #616161;
+            color: #fff;
             font-size: 14px;
         }
        
@@ -236,14 +238,14 @@
             display: flex;
             justify-content: center;
             gap: 10px;
-            margin-top: 10px;
+            margin-top: 30px;
         }
         .social-iconsservices a {
             text-decoration: none;
-            color: #007bff;
+            color: #fff;
             font-size: 15px;
             padding: 8px 15px;
-            border: 1px solid #007bff;
+            border: 1px solid #fff;
             border-radius: 50%;
             transition: transform 0.3s ease, color 0.3s;
 
@@ -255,6 +257,92 @@
         .pcard{
             margin-top: 8px;
         }
+
+
+        @media (max-width: 992px) {
+    .services {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+    }
+    .service {
+        height: 180px;
+    }
+    .steps-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .step {
+        width: 80%; 
+    }
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .line{
+        display: none;
+    }
+    .step-number{
+        margin-top: 20px;
+    }
+    .servicestext{
+        font-size: 17px;
+    }
+    .servicesp{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    .service {
+        height: 180px;
+        font-size: 14px;
+        padding: 15px;
+        margin: 0px 20px;
+    }
+    .service-content i {
+        font-size: 25px;
+    }
+    .service-content h3 {
+        font-size: 16px;
+    }
+    .service-content p {
+        font-size: 13px;
+    }
+    .stepshead {
+        font-size: 20px;
+    }
+    .stepstext {
+        font-size: 14px;
+    }
+    .step {
+        width: 90%;
+        padding: 15px;
+    }
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+    .card {
+        width: 90%;
+    }
+    .line{
+        display: none;
+    }
+    .team-container .card{
+        margin-top: 100px;
+    }
+    .team-container {
+            margin-top: 0px;
+            margin-bottom: 50px;
+        }
+    
+}
+    
 </style>    
 
 </head>
@@ -429,7 +517,7 @@
         <img src="img/doctor1.jpg" alt="د/ مازن علي">
         <h3>د/  مازن علي</h3>
         <p>أخصائي التغذية</p>
-        <p class="pcard">خبير في علم التغذية يعمل على تقييم احتياجات الأفراد من الغذاء، وتصميم خطط غذائية متوازنة لتحسين صحتهم أو تحقيق أهداف معينة</p>
+        <p class="pcard">خبير في علم التغذية يعمل على تقييم احتياجات الأفراد من الغذاء، وتصميم خطط غذائية متوازنة لتحسين صحتهم أو تحقيق أهداف معينة        </p>
 
         <div class="social-iconsservices">
             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -453,9 +541,9 @@
     </div>
     <div class="card">
         <img src="img/doctor2.jpg" alt="د/ حمزه احمد">
-        <h3>د/ حمزه احمد</h3>
-        <p>أخصائي الطب النفسي</p>
-        <p class="pcard">تشخيص وعلاج الاضطرابات النفسية والعقلية والسلوكية - فهم الأسباب البيولوجية والنفسية والاجتماعية التي تؤثر على الصحة العقلية</p>
+        <h3>د/ أحمد فايز</h3>
+        <p>أخصائي العلاج الطبيعي        </p>
+        <p class="pcard">متخصص في علاج الإصابات الرياضية وتأهيل اللاعبين لاستعادة أدائهم البدني - خبرة في إعادة التأهيل بعد العمليات الجراحية لتحسين الصحة الجسدية       </p>
         <div class="social-iconsservices">
             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>

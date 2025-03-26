@@ -44,17 +44,18 @@
 
 
     /*----------------------------------- doctors ---------*/
-    
     .team-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px; 
+    gap: 30px; /* المسافة بين البطاقات */
     margin-top: 150px;
     margin-bottom: 100px;
 }
 
 .card-doctor {
+    flex: 1 1 calc(33.33% - 30px); 
+    max-width: calc(33.33% - 30px); 
     background: #007bff;
     padding: 25px;
     border-radius: 10px;
@@ -62,6 +63,7 @@
     max-width: 350px; 
     text-align: center;
     flex-grow: 1;
+    margin-bottom: 100px; /* المسافة بين الصفوف */
 }
 
 .card-doctor img {
@@ -170,7 +172,13 @@
 
     .team-container {
         margin-top: 20px;
-        margin-bottom: 0px;
+        margin-bottom: 40px;
+    }
+    .card-doctor {
+        flex: 1 1 100%;  
+        max-width: 100%; 
+        margin-left:  40px;
+        margin-right: 40px;
     }
 
     
@@ -263,12 +271,12 @@
 <!----------------------------------------------- doctors ------------------>
 <div class="team-container">
     <div class="card-doctor">
-        <img src="img/مريم حسن.jpg" alt="د/ مازن علي">
+        <img src="img/مريم حسن.jpg" alt="د/ مريم حسن">
         <h3>د/ مريم حسن </h3>
         <p>طبيبة الأعصاب</p>
         <hr class="separator">
 
-        <p class="pcard">خبير في علم التغذية يعمل على تقييم احتياجات الأفراد من الغذاء، وتصميم خطط غذائية متوازنة لتحسين صحتهم أو تحقيق أهداف معينة</p>
+        <p class="pcard">متخصص في تشخيص وعلاج أمراض الجهاز العصبي - خبرة في علاج الصرع والصداع واضطرابات الحركة        </p>
         <div class="contact-info-doctor">
             <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
             <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
@@ -277,12 +285,12 @@
         
     </div>
     <div class="card-doctor">
-        <img src="img/عمر ناصر1.jpg" alt="د/ ميرا حازم">
+        <img src="img/عمر ناصر1.jpg" alt="د/ عمر ناصر">
         <h3>د/ عمر ناصر </h3>
         <p>أخصائي السمع</p>
         <hr class="separator">
 
-        <p class="pcard">نهتم بالنمو الجسدي والعقلي للأطفال، ونعمل على الوقاية من الأمراض وتقديم الإرشادات اللازمة للأهل للحفاظ على صحة أطفالهم</p>
+        <p class="pcard">متخصص في تشخيص وعلاج مشكلات السمع والتوازن - خبرة في تأهيل ضعاف السمع واستخدام الأجهزة السمعية الحديثة        </p>
         <div class="contact-info-doctor">
             <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
             <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
@@ -291,12 +299,12 @@
         
     </div>
     <div class="card-doctor" >
-        <img src="img/ايه فتحي.PNG" alt="د/احمد فايز">
+        <img src="img/ايه فتحي.PNG" alt="د/اية فتحي">
         <h3>د/ أية فتحي</h3>
         <p>طبيبة الأسنان</p>
         <hr class="separator">
 
-        <p class="pcard">متخصص في علاج الإصابات الرياضية وتأهيل اللاعبين لاستعادة أدائهم البدني - خبرة في إعادة التأهيل بعد العمليات الجراحية </p>
+        <p class="pcard">متخصصة في علاج مشكلات الفم والأسنان وتجميل الابتسامة - خبرة في تقويم الأسنان وعلاج تسوس الأسنان المتقدم        </p>
         <div class="contact-info-doctor">
             <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
             <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
@@ -304,18 +312,14 @@
         <a href="d.aya fathy.html" class="read-more-btn">اقرأ المزيد</a>
         
     </div>
-    
-    
-</div>
 
-<div class="team-container">
     <div class="card-doctor">
-        <img src="img/محمد احمد.jpg" alt="د/ مازن علي">
+        <img src="img/محمد احمد.jpg" alt="د/ محمد احمد">
         <h3>د/ محمد أحمد</h3>
         <p>طبيب القلب</p>
         <hr class="separator">
 
-        <p class="pcard">خبير في علم التغذية يعمل على تقييم احتياجات الأفراد من الغذاء، وتصميم خطط غذائية متوازنة لتحسين صحتهم أو تحقيق أهداف معينة</p>
+        <p class="pcard">متخصص في تشخيص وعلاج أمراض القلب والأوعية الدموية - خبرة في علاج اضطرابات النبض وارتفاع ضغط الدم        </p>
         <div class="contact-info-doctor">
             <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
             <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
@@ -324,12 +328,12 @@
         
     </div>
     <div class="card-doctor">
-        <img src="img/سناء محمود.jpg" alt="د/ ميرا حازم">
+        <img src="img/سناء محمود.jpg" alt="د/ سناء محمود">
         <h3>د/ سناء محمود</h3>
         <p>طبيبة الجراحة</p>
         <hr class="separator">
 
-        <p class="pcard">نهتم بالنمو الجسدي والعقلي للأطفال، ونعمل على الوقاية من الأمراض وتقديم الإرشادات اللازمة للأهل للحفاظ على صحة أطفالهم</p>
+        <p class="pcard">متخصص في إجراء العمليات الجراحية لعلاج مختلف الحالات الطبية - خبرة في الجراحات الطارئة والتجميلية والتنظيرية        </p>
         <div class="contact-info-doctor">
             <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
             <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
@@ -338,12 +342,12 @@
         
     </div>
     <div class="card-doctor">
-        <img src="img/معتز اشرف.jpg" alt="د/ حمزه احمد">
+        <img src="img/معتز اشرف.jpg" alt="د/ معتز اشرف">
         <h3>د/ معتز أشرف</h3>
         <p>طبيب السكر</p>
         <hr class="separator">
 
-        <p class="pcard">تشخيص وعلاج الاضطرابات النفسية والعقلية والسلوكية - فهم الأسباب البيولوجية والنفسية والاجتماعية التي تؤثر على الصحة العقلية</p>
+        <p class="pcard">متخصص في تشخيص وعلاج مرض السكري ومضاعفاته - خبرة في تنظيم مستويات السكر وتقديم خطط العلاج والتغذية المناسبة        </p>
         <div class="contact-info-doctor">
             <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
             <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
@@ -351,19 +355,14 @@
         <a href="d.motaz ashraf.html" class="read-more-btn">اقرأ المزيد</a>
         
     </div>
-    
-    
-</div>
 
-
-<div class="team-container">
     <div class="card-doctor">
-        <img src="img/داليا محمد.jpg" alt="د/ مازن علي">
+        <img src="img/داليا محمد.jpg" alt="د/ داليا محمد">
         <h3>د/ داليا محمد</h3>
         <p>طبيبة البطن</p>
         <hr class="separator">
 
-        <p class="pcard">خبير في علم التغذية يعمل على تقييم احتياجات الأفراد من الغذاء، وتصميم خطط غذائية متوازنة لتحسين صحتهم أو تحقيق أهداف معينة</p>
+        <p class="pcard">متخصص في تشخيص وعلاج أمراض الجهاز الهضمي - خبرة في علاج القرحة الهضمية، القولون العصبي، واضطرابات الكبد        </p>
         <div class="contact-info-doctor">
             <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
             <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
@@ -372,7 +371,7 @@
         
     </div>
     <div class="card-doctor">
-        <img src="img/doctor2.jpg" alt="د/ ميرا حازم">
+        <img src="img/doctor2.jpg" alt="د/ احمد فايز">
         <h3>د/ أحمد فايز</h3>
         <p>أخصائي العلاج الطبيعي</p>
         <hr class="separator">
@@ -386,7 +385,7 @@
         
     </div>
     <div class="card-doctor" >
-        <img src="img/doctor3.jpg" alt="د/احمد فايز">
+        <img src="img/doctor3.jpg" alt="د/ميرا حازم">
         <h3>د/ ميرا حازم</h3>
         <p>طبيبة أطفال</p>
         <hr class="separator">
@@ -402,6 +401,101 @@
     
     
 </div>
+
+<!--<div class="team-container">
+    <div class="card-doctor">
+        <img src="img/محمد احمد.jpg" alt="د/ محمد احمد">
+        <h3>د/ محمد أحمد</h3>
+        <p>طبيب القلب</p>
+        <hr class="separator">
+
+        <p class="pcard">متخصص في تشخيص وعلاج أمراض القلب والأوعية الدموية - خبرة في علاج اضطرابات النبض وارتفاع ضغط الدم        </p>
+        <div class="contact-info-doctor">
+            <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
+            <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
+        </div>
+        <a href="d.mohamed ahmed.html" class="read-more-btn">اقرأ المزيد</a>
+        
+    </div>
+    <div class="card-doctor">
+        <img src="img/سناء محمود.jpg" alt="د/ سناء محمود">
+        <h3>د/ سناء محمود</h3>
+        <p>طبيبة الجراحة</p>
+        <hr class="separator">
+
+        <p class="pcard">متخصص في إجراء العمليات الجراحية لعلاج مختلف الحالات الطبية - خبرة في الجراحات الطارئة والتجميلية والتنظيرية        </p>
+        <div class="contact-info-doctor">
+            <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
+            <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
+        </div>
+        <a href="d.sanaa mahmoud.html" class="read-more-btn">اقرأ المزيد</a>
+        
+    </div>
+    <div class="card-doctor">
+        <img src="img/معتز اشرف.jpg" alt="د/ معتز اشرف">
+        <h3>د/ معتز أشرف</h3>
+        <p>طبيب السكر</p>
+        <hr class="separator">
+
+        <p class="pcard">متخصص في تشخيص وعلاج مرض السكري ومضاعفاته - خبرة في تنظيم مستويات السكر وتقديم خطط العلاج والتغذية المناسبة        </p>
+        <div class="contact-info-doctor">
+            <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
+            <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
+        </div>
+        <a href="d.motaz ashraf.html" class="read-more-btn">اقرأ المزيد</a>
+        
+    </div>
+    
+    
+</div> -->
+
+
+<!--<div class="team-container">
+    <div class="card-doctor">
+        <img src="img/داليا محمد.jpg" alt="د/ داليا محمد">
+        <h3>د/ داليا محمد</h3>
+        <p>طبيبة البطن</p>
+        <hr class="separator">
+
+        <p class="pcard">متخصص في تشخيص وعلاج أمراض الجهاز الهضمي - خبرة في علاج القرحة الهضمية، القولون العصبي، واضطرابات الكبد        </p>
+        <div class="contact-info-doctor">
+            <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
+            <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
+        </div>
+        <a href="d.dalia mohamed.html" class="read-more-btn">اقرأ المزيد</a>
+        
+    </div>
+    <div class="card-doctor">
+        <img src="img/doctor2.jpg" alt="د/ احمد فايز">
+        <h3>د/ أحمد فايز</h3>
+        <p>أخصائي العلاج الطبيعي</p>
+        <hr class="separator">
+
+        <p class="pcard">متخصص في علاج الإصابات الرياضية وتأهيل اللاعبين لاستعادة أدائهم البدني - خبرة في إعادة التأهيل بعد العمليات الجراحية </p>
+        <div class="contact-info-doctor">
+            <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
+            <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
+        </div>
+        <a href="d.ahmed fayez.html" class="read-more-btn">اقرأ المزيد</a>
+        
+    </div>
+    <div class="card-doctor" >
+        <img src="img/doctor3.jpg" alt="د/ميرا حازم">
+        <h3>د/ ميرا حازم</h3>
+        <p>طبيبة أطفال</p>
+        <hr class="separator">
+
+        <p class="pcard">نهتم بالنمو الجسدي والعقلي للأطفال، ونعمل على الوقاية من الأمراض وتقديم الإرشادات اللازمة للأهل للحفاظ على صحة أطفالهم</p>
+        <div class="contact-info-doctor">
+            <p> <a href="tel:+201234567890">+20 123 456 7890</a> <i class="fas fa-phone"></i></p>
+            <p> <a href="mailto:doctor@email.com">doctor@email.com</a> <i class="fas fa-envelope"></i></p>
+        </div>
+        <a href="d.mera hazem.html" class="read-more-btn">اقرأ المزيد</a>
+        
+    </div>
+    
+    
+</div>-->
 
 
 
