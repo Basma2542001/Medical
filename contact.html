@@ -20,7 +20,7 @@
             width: 100%;
             height: 400px;
             background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), 
-                url('img/background.jpg') no-repeat center center/cover;
+            url('img/banner1.jpg') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -131,7 +131,6 @@
         width: 100%;
         height: 400px;
         border: none;
-        border-radius: 10px; 
     }
  </style>   
 
@@ -188,8 +187,8 @@
         <input type="submit" value="تسجيل الدخول" class="btnlogin">
         <input type="checkbox" id="remember">
         <label for="remember">ذكرني</label>
-        <p>هل نسيت كلمة المرور؟ <a href="#">اضغط هنا</a></p>
-        <p>هل لا تمتلك حساب؟ <a href="#"> سجل الآن</a></p>
+        <p>هل نسيت كلمة المرور؟ <a href="#" id="forgot-password">اضغط هنا</a></p>
+<p>هل لا تمتلك حساب؟ <a href="#" id="go-to-register"> سجل الآن</a></p>
      </form>
 
 </div>
@@ -204,7 +203,7 @@
         <input type="password" class="box" placeholder="ادخل كلمة المرور">
         <input type="password" class="box" placeholder="تأكيد كلمة المرور">
         <input type="submit" value="إنشاء الحساب" class="btnregister">
-        <p>هل لديك حساب؟ <a href="#"> تسجيل الدخول</a></p>
+        <p>هل لديك حساب؟ <a href="#" id="go-to-login"> تسجيل الدخول</a></p>
     </form>
 </div>
 

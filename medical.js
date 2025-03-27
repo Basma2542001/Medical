@@ -10,11 +10,9 @@ let navbar = document.querySelector(".navbar");
         let menu = document.querySelector(".navbar");
 let menuBtn = document.querySelector("#menu-bar");
 
-// تبديل الأيقونة 
 menuBtn.onclick = () => {
     menu.classList.toggle("active");
 
-    // تغيير الأيقونة 
     if (menu.classList.contains("active")) {
         menuBtn.classList.replace("fa-bars", "fa-times");
     } else {
@@ -26,21 +24,41 @@ menuBtn.onclick = () => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    let registerBtn = document.getElementById("register-btn");
+    let loginForm = document.querySelector(".login-form-container");
     let registerForm = document.querySelector(".register-form-container");
+
+    let registerBtn = document.getElementById("register-btn"); 
+    let goToRegisterLinks = document.querySelectorAll("#go-to-register, #forgot-password");
+    let goToLogin = document.querySelector("#go-to-login");
+
+    let formClose = document.getElementById("form-close");
     let registerFormClose = document.getElementById("register-form-close");
 
-    // فتح فورم التسجيل عند الضغط على الأيقونة
-    registerBtn.onclick = () => {
-        registerForm.classList.add("active");
-    };
-
-    // إغلاق فورم التسجيل عند الضغط على زر الإغلاق
-    registerFormClose.onclick = () => {
-        registerForm.classList.remove("active");
-    };
-
     
+    if (registerBtn) {
+        registerBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            registerForm.classList.add("active"); 
+        });
+    }
+
+    goToRegisterLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            loginForm.classList.remove("active"); 
+            registerForm.classList.add("active"); 
+        });
+    });
+
+    goToLogin.addEventListener("click", function (event) {
+        event.preventDefault();
+        registerForm.classList.remove("active"); 
+        loginForm.classList.add("active"); 
+    });
+
+    formClose.onclick = () => loginForm.classList.remove("active");
+
+    registerFormClose.onclick = () => registerForm.classList.remove("active");
 });
 
 
