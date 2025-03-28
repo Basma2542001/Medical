@@ -24,7 +24,6 @@
     color: #fff;
 }
 
-
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -624,6 +623,7 @@ flex-direction: column;
     color: #134b9e;
     margin-bottom: 40px;
 }
+
 
 .services-container {
     display: flex;
